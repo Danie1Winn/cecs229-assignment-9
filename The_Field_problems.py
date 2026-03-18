@@ -55,7 +55,7 @@ def myFunctionComposition(f, g):
       >>> myFunctionComposition(a,b) == {'x':'twentyfour','y':'twentyfive'}
       True
     '''
-    pass
+    return {k: g[v] for k, v in f.items()}
 
 
 
@@ -184,3 +184,11 @@ GF2_sum_1 = ... # answer with 0 or 1
 GF2_sum_2 = ...
 GF2_sum_3 = ...
 
+def main():
+    # Problem 1.7.3
+    f = {0: 'a', 1: 'b'}
+    g = {'a': 'apple', 'b': 'banana'}
+    print(f"Problem 1.7.3\nf = {f}\ng = {g}\nResult: {myFunctionComposition(f, g)}\n")
+
+if __name__ == "__main__":
+    main()
