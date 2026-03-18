@@ -3,7 +3,8 @@
 
 
 
-
+import cmath
+import math
 
 ## 1: (Problem 1.7.1) Python Comprehensions: Filtering
 def myFilter(L, num):
@@ -164,6 +165,14 @@ complex_addition_b = ...
 complex_addition_c = ...
 complex_addition_d = ...
 
+## Problem 1.7.11b Multiplication of exponentials
+term1 = cmath.exp((math.pi / 4) * 1j)
+term2 = cmath.exp((2 * math.pi / 3) * 1j)
+
+product = term1 * term2
+
+simplified_exponent = cmath.exp((11 * math.pi / 12) * 1j)
+
 
 
 ## 10: (Problem 1.7.12) Combining Complex Operations
@@ -186,7 +195,7 @@ def transform(a, b, L):
 
 
 ## 11: (Problem 1.7.13) GF(2) Arithmetic
-GF2_sum_1 = ... # answer with 0 or 1
+GF2_sum_1 = (1 + 1 + 1 + 0) % 2
 GF2_sum_2 = ...
 GF2_sum_3 = ...
 
@@ -206,6 +215,12 @@ def main():
 
     # Problem 1.7.10a
     print(f"Problem 1.7.10a\n(3+1i) + (2+2i) = {complex_addition_a}\n")
+
+    # Problem 1.7.11b
+    print(f"Problem 1.7.11b\nOriginal Product: {product}\nSimplified Exponent: {simplified_exponent}\nEquivalence Check: {cmath.isclose(product, simplified_exponent)}\n")
+
+    # Problem 1.7.13a
+    print(f"Problem 1.7.13a\n(1 + 1 + 1 + 0) % 2 = {GF2_sum_1}")
 
 if __name__ == "__main__":
     main()
