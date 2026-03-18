@@ -151,7 +151,7 @@ Be sure your procedure works for the empty list.
     '''
     result = set()
     for s in L:
-        result.updates(s)
+        result.update(s)
     return result
 
 
@@ -159,7 +159,7 @@ Be sure your procedure works for the empty list.
 ## 9: (Problem 1.7.10) Complex Addition Practice
 # Each answer should be a Python expression whose value is a complex number.
 
-complex_addition_a = ...
+complex_addition_a = (3 + 1j) + (2 + 2j)
 complex_addition_b = ...
 complex_addition_c = ...
 complex_addition_d = ...
@@ -203,6 +203,9 @@ def main():
     # Problem 1.7.8
     L_u = [{1, 2}, {2, 3}, {4, 5, 1}]
     print(f"Problem 1.7.8\nSets list: {L_u}\nResult: {myUnion(L_u)}\n")
+
+    # Problem 1.7.10a
+    print(f"Problem 1.7.10a\n(3+1i) + (2+2i) = {complex_addition_a}\n")
 
 if __name__ == "__main__":
     main()
