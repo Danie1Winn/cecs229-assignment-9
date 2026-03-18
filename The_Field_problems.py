@@ -91,7 +91,10 @@ Be sure your procedure works for the empty list.
       >>> myProduct([-3,2,4])
       -24
     '''
-    pass
+    result = 1
+    for num in L:
+        result *= num
+    return result
 
 
 
@@ -189,6 +192,10 @@ def main():
     f = {0: 'a', 1: 'b'}
     g = {'a': 'apple', 'b': 'banana'}
     print(f"Problem 1.7.3\nf = {f}\ng = {g}\nResult: {myFunctionComposition(f, g)}\n")
+
+    # Problem 1.7.5
+    L = [2, 3, 4, 5]
+    print(f"Problem 1.7.5\nList: {L}\nResult: {myProduct(L)}")
 
 if __name__ == "__main__":
     main()
