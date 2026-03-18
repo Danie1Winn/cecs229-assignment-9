@@ -149,7 +149,10 @@ Be sure your procedure works for the empty list.
     >>> myUnion([set(),{3,5},{3,5}])
     {3, 5}
     '''
-    pass
+    result = set()
+    for s in L:
+        result.updates(s)
+    return result
 
 
 
@@ -195,7 +198,11 @@ def main():
 
     # Problem 1.7.5
     L = [2, 3, 4, 5]
-    print(f"Problem 1.7.5\nList: {L}\nResult: {myProduct(L)}")
+    print(f"Problem 1.7.5\nList: {L}\nResult: {myProduct(L)}\n")
+
+    # Problem 1.7.8
+    L_u = [{1, 2}, {2, 3}, {4, 5, 1}]
+    print(f"Problem 1.7.8\nSets list: {L_u}\nResult: {myUnion(L_u)}\n")
 
 if __name__ == "__main__":
     main()
